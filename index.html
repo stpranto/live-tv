@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LiveTV Free</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+  <header>
+    <h1>📺 LiveTV Free</h1>
+    <input type="text" id="search" placeholder="Search channels..." oninput="filterChannels()" />
+  </header>
+  <div class="layout">
+    <aside id="channel-list"></aside>
+    <main>
+      <div id="player-box">
+        <video id="video" controls autoplay></video>
+        <div id="channel-info">
+          <span id="now-playing">Select a channel to watch</span>
+        </div>
+      </div>
+      <div id="error-msg" style="display:none;">
+        ⚠️ Stream unavailable. Try another channel.
+      </div>
+    </main>
+  </div>
+  <script src="channels.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
